@@ -2,8 +2,8 @@
 
 ## by Julian Faraway
 
-A forthcoming textbook published by Chapman & Hall/CRC press
 
+- [Published by CRC Press](https://www.routledge.com/Linear-Models-with-Python/Faraway/p/book/9781138483958)
 - [Python scripts](pyscripts/) of the code from each chapter
 - [Python package](https://pypi.org/project/faraway/)
 
@@ -36,7 +36,7 @@ is advised to look elsewhere for a basic introduction to Python but
 should not hesitate to dive into this book and pick it up as you go. I
 shall try to help. See the appendix to get started.
 
-This book has an ancestor entitled [Linear Models with R](https://people.bath.ac.uk/jjf23/LMR/index.html). Clearly
+This book has an ancestor entitled [Linear Models with R](https://julianfaraway.github.io/faraway/LMR/). Clearly
 the book you hold now is about Python and not `` but it is not an exact translation. Although
 I was able to accomplish almost all of the `R` book in this Python book, I found reason for
 variation:
