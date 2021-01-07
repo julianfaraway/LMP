@@ -4,7 +4,7 @@
 
 
 - [Published by CRC Press](https://www.routledge.com/Linear-Models-with-Python/Faraway/p/book/9781138483958)
-- [Python scripts](pyscripts/) of the code from each chapter
+- [Python scripts and data](https://github.com/julianfaraway/LMP) 
 - [Python package](https://pypi.org/project/faraway/)
 
 ## Preface
