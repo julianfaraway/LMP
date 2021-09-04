@@ -37,7 +37,7 @@ should not hesitate to dive into this book and pick it up as you go. I
 shall try to help. See the appendix to get started.
 
 This book has an ancestor entitled [Linear Models with R](https://julianfaraway.github.io/faraway/LMR/). Clearly
-the book you hold now is about Python and not `` but it is not an exact translation. Although
+the book you hold now is about Python and not `R` but it is not an exact translation. Although
 I was able to accomplish almost all of the `R` book in this Python book, I found reason for
 variation:
 
