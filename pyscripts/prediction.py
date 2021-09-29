@@ -22,7 +22,7 @@ fat = faraway.datasets.fat.load()
 
 fat.insert(0,'Intercept',1)
 x0 = fat.iloc[:,np.r_[0,4:7,9:19]].median()
-pd.DataFrame(x0).T
+x0 = pd.DataFrame(x0).T; x0
 
 
 #	
@@ -46,7 +46,7 @@ lmod.get_prediction(x0).summary_frame()
 #	
 
 x1 = fat.iloc[:,np.r_[0,4:7,9:19]].quantile(0.95)
-pd.DataFrame(x1).T
+x1 = pd.DataFrame(x1).T; x1
 
 
 #	
