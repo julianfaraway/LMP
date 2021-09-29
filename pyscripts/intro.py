@@ -54,13 +54,13 @@ pima['test'].value_counts()
 
 #	
 
-sns.distplot(pima.diastolic.dropna())
+sns.displot(pima.diastolic.dropna(), kde=True)
 
 
 #	
 
 pimad = pima.diastolic.dropna().sort_values()
-sns.lineplot(range(0, len(pimad)), pimad)
+sns.lineplot(x=range(0, len(pimad)), y=pimad)
 
 
 #	
@@ -147,7 +147,7 @@ alpha1 = np.mean(families['childHeight']) - \
 
 #	
 
-sns.lmplot('midparentHeight', 'childHeight', families, 
+sns.lmplot(x='midparentHeight', y='childHeight', data=families, 
     ci=None, scatter_kws={'s':2})
 xr = np.array([64,76])
 plt.plot(xr, alpha1 + xr*beta1,'--')
