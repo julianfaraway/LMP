@@ -269,7 +269,7 @@ sm.stats.anova_lm(lmod,typ=3).round(3)
 
 #	
 
-sns.residplot(lmod.fittedvalues, lmod.resid)
+sns.residplot(x=lmod.fittedvalues, y=lmod.resid)
 plt.xlabel("Fitted values")
 plt.ylabel("Residuals")
 p=sm.qqplot(lmod.resid, line="q")

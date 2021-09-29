@@ -44,7 +44,7 @@ chredlin.head()
 
 #	
 
-chredlin.drop('zip',1).describe().round(2)
+chredlin.drop('zip',axis=1).describe().round(2)
 
 
 #	

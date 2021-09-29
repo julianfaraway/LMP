@@ -110,7 +110,7 @@ sns.regplot(x='speed', y = 'dist', data = cars)
 #	
 
 lmod = smf.ols('dist ~ speed', cars).fit()
-g = sns.regplot(lmod.fittedvalues, np.sqrt(abs(lmod.resid)), 
+g = sns.regplot(x=lmod.fittedvalues,y=np.sqrt(abs(lmod.resid)), 
     lowess = True)
 g.set_xlabel("Fitted Values")
 g.set_ylabel("Log-squared Residuals")

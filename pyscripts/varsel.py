@@ -17,7 +17,7 @@ import faraway.utils
 import faraway.datasets.statedata
 statedata = faraway.datasets.statedata.load()
 statedata.index = statedata['State']
-statedata = statedata.drop('State',1)
+statedata = statedata.drop('State',axis=1)
 statedata.head()
 
 

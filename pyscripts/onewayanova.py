@@ -1,4 +1,4 @@
-# # One Factor Models
+# # One-Factor Models
 # ## The Model
 # ## An Example
 #	
@@ -70,8 +70,8 @@ lmods.sumary()
 # ## Diagnostics
 #	
 
-p = sns.scatterplot(lmod.fittedvalues + \
-   np.random.uniform(-0.1,0.1, len(coagulation)), lmod.resid)
+p = sns.scatterplot(x=lmod.fittedvalues + \
+   np.random.uniform(-0.1,0.1, len(coagulation)), y = lmod.resid)
 p.axhline(0,ls='--')
 plt.xlabel("Fitted values")
 plt.ylabel("Residuals")

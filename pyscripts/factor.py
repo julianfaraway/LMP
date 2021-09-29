@@ -33,7 +33,7 @@ sns.boxplot(x="csa", y="ptsd", data=sexab)
 #	
 
 sns.pairplot(x_vars="cpa", y_vars="ptsd", data=sexab, 
-    hue="csa", markers=["+","o"])
+    hue="csa", markers=["s","o"])
 
 
 #	
@@ -97,6 +97,7 @@ lmod = smf.ols(
     'ptsd ~ C(csa,Treatment(reference="NotAbused"))',
     sexab).fit()
 lmod.sumary()
+
 
 
 # ## Factors and Quantitative Predictors
@@ -213,7 +214,7 @@ lmod = smf.ols('np.log(Gas) ~ Temp+Insul', whiteside).fit()
 lmod.sumary()
 
 
-# ## Factors With More Than Two Levels
+# ## Factors with More Than Two Levels
 #	
 
 import faraway.datasets.fruitfly
@@ -318,7 +319,8 @@ print(contrast.matrix)
 
 mm = patsy.dmatrix('~ C(activity,Sum)', ff)
 ii = [1, 25, 49, 75, 99]
-pd.DataFrame(mm[ii,:], index=ff.activity.iloc[ii], columns=['intercept','isolated','low','high','one'])
+pd.DataFrame(mm[ii,:], index=ff.activity.iloc[ii], 
+    columns=['intercept','isolated','low','high','one'])
 
 
 # ## Exercises

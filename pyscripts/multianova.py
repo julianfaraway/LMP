@@ -192,14 +192,14 @@ sm.qqplot(lmod.resid, line="q")
 
 #	
 
-sns.residplot(lmod.fittedvalues, lmod.resid)
+sns.residplot(x=lmod.fittedvalues,y=lmod.resid)
 plt.xlabel("Fitted values")
 plt.ylabel("Residuals")
 
 
 #	
 
-sns.swarmplot(pvc['operator'], lmod.resid)
+sns.swarmplot(x=pvc['operator'],y=lmod.resid)
 plt.axhline(0)
 plt.xlabel("Operator")
 plt.ylabel("Residuals")
@@ -320,7 +320,7 @@ plt.ylabel("Warpbreaks")
 
 lmod = smf.ols('breaks ~ wool * tension', warpbreaks).fit()
 fig, ax = plt.subplots()
-sns.regplot(lmod.fittedvalues, lmod.resid,
+sns.regplot(x=lmod.fittedvalues,y=lmod.resid,
     scatter_kws={'alpha':0.3}, ci=None, ax=ax)
 ax.set_xlim(np.array(ax.get_xlim())+[-1,1])
 ax.set_xlabel("Fitted values")
@@ -332,7 +332,7 @@ ax.set_ylabel("Residuals")
 lmod = smf.ols('np.sqrt(breaks) ~ wool * tension', 
     warpbreaks).fit()
 fig, ax = plt.subplots()
-sns.regplot(lmod.fittedvalues, lmod.resid,
+sns.regplot(x=lmod.fittedvalues,y=lmod.resid,
     scatter_kws={'alpha':0.3}, ci=None, ax=ax)
 ax.set_xlim(np.array(ax.get_xlim())+[-0.1,0.1])
 ax.set_xlabel("Fitted values")
@@ -351,7 +351,8 @@ lmod.sumary()
 
 #	
 
-lmod = smf.ols('np.sqrt(breaks) ~ wool:tension-1', warpbreaks).fit()
+lmod = smf.ols(
+    'np.sqrt(breaks) ~ wool:tension-1', warpbreaks).fit()
 lmod.sumary()
 
 
@@ -430,15 +431,7 @@ plt.ylabel("Sorted absolute coefficients")
 
 # ## Exercises
 #	
-
-    df = sm.datasets.get_rdataset("barley","lattice")
-    barley = df.data
-
-
 #	
-
-    print(df.__doc__)
-
 
 
 # ## Packages Used

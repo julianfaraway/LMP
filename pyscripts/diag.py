@@ -115,7 +115,7 @@ plt.axhline(0)
 #	
 
 gmod = smf.ols(
-   'np.sqrt(Species) ~ Area + Elevation + Nearest + Scruz + Adjacent', 
+   'np.sqrt(Species) ~ Area+Elevation+Nearest+Scruz+Adjacent', 
    galapagos).fit()
 plt.scatter(gmod.fittedvalues, gmod.resid)
 plt.ylabel("Residuals")
@@ -372,12 +372,13 @@ smf.ols('sr ~ pop15 + pop75 + dpi + ddpi',
 #	
 
 savings['age'] = np.where(savings.pop15 > 35, 'young', 'old')
-sns.lmplot('ddpi','sr',data=savings, hue='age',legend_out=False)
+sns.lmplot(x='ddpi',y='sr',data=savings, hue='age',
+    facet_kws={"legend_out": False})
 
 
 #	
 
-sns.lmplot('ddpi','sr',data=savings, col='age')
+sns.lmplot(x='ddpi',y='sr',data=savings, col='age')
 
 
 # ## Discussion
