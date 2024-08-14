@@ -6,7 +6,7 @@
 - [Published by Routledge](https://www.routledge.com/Linear-Models-with-Python/Faraway/p/book/9781138483958)
 - [Python scripts and data](https://github.com/julianfaraway/LMP) 
 - [Python package](https://pypi.org/project/faraway/)
-- [Errata](https://julianfaraway.github.io/LMP/errata.md)
+- [Errata](errata.md)
 
 ## Preface
 
