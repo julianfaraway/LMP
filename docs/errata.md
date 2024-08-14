@@ -1,4 +1,6 @@
-# Errata for Linear Model with Python
+---
+title: Errata for Linear Model with Python
+---
 
 - p 41: Last code chunk on the page should read:
 
