@@ -21,3 +21,6 @@ n=30 p=2 Residual SD=91.732 R-squared=0.38
 ```
 
 The p-value of 0.0003 indicates strong statistical significance.
+
+- p 68: Wrong pair of observations used in the Python code - should be 3 and 212 (as
+        mentioned in the text)

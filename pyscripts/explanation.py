@@ -15,7 +15,8 @@ import faraway.utils
 
 import faraway.datasets.galapagos
 galapagos = faraway.datasets.galapagos.load()
-lmod = smf.ols('Species ~ Area + Elevation + Nearest + Scruz  + Adjacent', 
+lmod = smf.ols(
+    'Species ~ Area + Elevation + Nearest + Scruz  + Adjacent', 
     galapagos).fit()
 lmod.sumary()
 
@@ -91,7 +92,7 @@ mp
 
 #	
 
-newhamp.iloc[[76, 84],[0,6,11]]
+newhamp.iloc[[3, 212],[0,6,11]]
 
 
 #	
