@@ -225,7 +225,7 @@ import faraway.datasets.star
 star = faraway.datasets.star.load()
 gs1 = smf.ols('light ~ temp', star).fit()
 X = gs1.model.wexog
-gs2 = sm.RLM(star.light, X, data=star).fit()
+gs2 = sm.RLM(star.light, X).fit()
 gs3 = smf.ols('light ~ temp', star.loc[star.temp > 3.6,:]).fit()
 plt.scatter(star.temp, star.light, label = None)
 xr = np.array([min(star.temp), max(star.temp)])
