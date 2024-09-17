@@ -70,9 +70,9 @@ lmod.sumary()
 
 #	
 
-lmods = smf.ols('Species ~ Elevation + Nearest + Scruz', 
+lmoda = smf.ols('Species ~ Area', 
         galapagos).fit()
-sm.stats.anova_lm(lmods,lmod)
+lmoda.sumary()
 
 
 #	

@@ -197,7 +197,7 @@ lmod.params
 
 #	
 
-odor.iloc[:,1:].cov()
+lmod.cov_params()
 
 
 #	
