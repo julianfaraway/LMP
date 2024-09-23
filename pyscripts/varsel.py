@@ -213,7 +213,7 @@ Xtest = testfat.loc[:,prednames]
 pcols = Xtrain.shape[1]
 prefs = np.argsort(selector.ranking_)
 testpred = np.empty(pcols + 1)
-testpred[0] = rmse(testfat.brozek, np.mean(trainfat.brozek))
+testpred[0] = rmse(testfat.brozek, np.mean(testfat.brozek))
 trainpred = np.empty(pcols + 1)
 trainpred[0] = rmse(trainfat.brozek, np.mean(trainfat.brozek))
 
@@ -262,7 +262,7 @@ selector = selector.fit(X, scalfat.brozek)
 
 #	
 
-plt.plot(np.arange(1,14),-selector.grid_scores_)
+plt.plot(np.arange(1,14),-selector.cv_results_["mean_test_score"])
 plt.xlabel("No. of Predictors")
 plt.ylabel("MSE")
 
