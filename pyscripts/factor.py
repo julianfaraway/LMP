@@ -224,7 +224,7 @@ ff = faraway.datasets.fruitfly.load()
 #	
 
 sns.pairplot(x_vars="thorax", y_vars="longevity", data=ff, 
-    hue="activity",height=5,markers=["o",".","+","x","v"])
+    hue="activity",height=5,markers=["o",".","P","X","v"])
 
 
 #	
@@ -260,14 +260,14 @@ lmod.sumary()
 
 #	
 
-g = sns.residplot(lmod.fittedvalues, lmod.resid)
+g = sns.residplot(x=lmod.fittedvalues, y=lmod.resid)
 g.set(xlabel="Fitted values",ylabel="Residuals")
 
 
 #	
 
 lmod = smf.ols('np.log(longevity) ~ thorax+activity', ff).fit()
-g = sns.residplot(lmod.fittedvalues, lmod.resid)
+g = sns.residplot(x=lmod.fittedvalues, y=lmod.resid)
 g.set(xlabel="Fitted values",ylabel="Residuals")
 
 

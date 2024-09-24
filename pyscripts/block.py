@@ -133,9 +133,9 @@ abrasion.pivot(index = 'run', columns='position',
 #	
 
 sns.catplot(x='run',y='wear',hue='position', data=abrasion, 
-    kind='point',scale=0.5)
+    kind='point')
 sns.catplot(x='run',y='wear',hue='material', data=abrasion, 
-    kind='point',scale=0.5)
+    kind='point')
 
 
 #	

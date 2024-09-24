@@ -131,7 +131,7 @@ pvc = faraway.datasets.pvc.load()
 #	
 
 sns.catplot(x='resin',y='psize',hue='operator', data=pvc, 
-    kind="point",ci=None)
+    kind="point",errorbar=None)
 
 
 #	
@@ -156,7 +156,7 @@ plt.ylabel("Particle Size")
 #	
 
 sns.catplot(x='operator',y='psize',hue='resin', data=pvc, 
-    ci=None,scale=0.5,kind="point")
+    ci=errobar,scale=0.5,kind="point")
 
 
 #	
@@ -249,7 +249,7 @@ sns.boxplot(x="wool", y="breaks", data=warpbreaks)
 #	
 
 ax = sns.catplot(x='wool',y='breaks',hue='tension', 
-    data=warpbreaks, ci=None,kind="point")
+    data=warpbreaks, errorbar=None,kind="point")
 ax = sns.swarmplot(x='wool',y='breaks',hue='tension', 
     data=warpbreaks)
 ax.legend_.remove()
@@ -431,7 +431,15 @@ plt.ylabel("Sorted absolute coefficients")
 
 # ## Exercises
 #	
+
+    df = sm.datasets.get_rdataset("barley","lattice")
+    barley = df.data
+
+
 #	
+
+    print(df.__doc__)
+
 
 
 # ## Packages Used
