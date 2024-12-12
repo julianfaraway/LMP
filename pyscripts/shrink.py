@@ -130,7 +130,7 @@ lmod.sumary()
 import faraway.datasets.meatspec
 meatspec = faraway.datasets.meatspec.load()
 trainmeat = meatspec.iloc[:172,]
-testmeat = meatspec.iloc[173:,]
+testmeat = meatspec.iloc[172:,]
 
 
 #	
